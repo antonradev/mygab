@@ -1,2 +1,2 @@
 # mygab
-Basic Android application based on Cordova and Angular.js
+Basic Android application based on Cordova and Angular.js. Saving data to LocalStorage
