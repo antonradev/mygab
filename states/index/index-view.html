@@ -1,0 +1,38 @@
+<div class="index-state container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="post-gab-form">
+                <form class="" name="postGabForm" novalidate="">
+                    <strong>Type a Gab:</strong>
+                    <textarea rows="4" class="form-control gab-content" name="gab_content" 
+                              ng-model="postGab.content" required="" 
+                              placeholder="Type something now..."></textarea>
+
+                    <button ng-disabled="postGabForm.$invalid" ng-click="InsertGab()" type="submit" id="post" name="post" class="btn btn-primary btn-block btn-lg">Post it</button>
+                </form>
+            </div>
+
+            <div class="gabs-list">
+
+                <div ng-show="gabLength.length > 0">
+                    <strong>My Gabs: {{gabLength.length}}</strong> <button class="btn btn-danger btn-sm pull-right" ng-click="deleteGabs()">Delete Gabs</button>
+                    <ul class="list-group" style="margin-top: 19px;">
+                        <li class="list-group-item" ng-repeat="gab in savedGabs"><span class="pull-left gab-text">{{gab.content}}</span> 
+                            <button ng-click="deleteThisGab(gab)" class="btn btn-sm btn-danger pull-right" style="margin-left: 5px;"><i class="fa fa-times"></i></button> 
+                            <button ng-click="editThisGab(gab)" class="btn btn-sm btn-default pull-right"><i class="fa fa-pencil"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
